@@ -20,9 +20,9 @@ switch (numOrStr){
         console.log('ви скасували')
     break;
 
-    // case '':
-    //     console.log('Empty String');
-    //     break;
+    case '':
+        console.log('Empty String');
+        break;
     
     case (isNaN( +numOrStr )):
         console.log(' number is Ba_NaN');
