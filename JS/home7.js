@@ -86,7 +86,9 @@ for (let i = 0; i< arr.length; i+=1){
         maxOrder=i;
     }
 }
-console.log(min, max);
+console.log(`максимальний елемент масиву ${max},  порядковий номер ${maxOrder}.
+Mінімальний елемент масиву ${min}, порядковий номер ${minOrder}
+`);
 
 
 
