@@ -1,47 +1,48 @@
 
+const whatAction = ()=>{
+    return prompt("що ти хочеш зробити - add, sub, mult, чи div");
+}
+
+
 
 const numberToCount = prompt("введіть 2 числа");
 let numbers = numberToCount.split(" ").map((num) => Number(num));
 let result = 0;
 
 
-const whatAction = (arr)=>{
-const question = prompt("що ти хочеш зробити - add, sub, mult, чи div");
-console.log(question);
-
-    switch (question) {
-        case "add":
-            console.log('adding')
-            return console.log((arr)=> arr[0] + arr[1]);
-      
-        case "sub":
-            return sub();
-      
-        case "mult":
-            return mult();
-      
-        case "div":
-            return div();
-
-          default:
-              alert("sorry, you did not enter any of the options");
-            //   whatAction();
-      }
-
-};
-
+const add = (arr)=> arr[0] + arr[1];
 const sub = (arr)=> arr[0] - arr[1];
 const mult = (arr)=> arr[0] * arr[1];
 const div = (arr)=> arr[0] / arr[1];
 
 
-
-
 const showResult = (arr, action)=>{
-    return `${arr[0]} ${action} ${arr[1]} = ${action(arr)}`
+    action = whatAction();
+    
+    switch (whatAction) {
+      case "add":
+          return `${arr[0]} + ${arr[1]} = ${action(arr)}`;
+    
+      case "sub":
+        return `${arr[0]} - ${arr[1]} = ${action(arr)}`;
+    
+      case "mult":
+        return `${arr[0]} * ${arr[1]} = ${action(arr)}`;
+    
+      case "div":
+        return `${arr[0]} / ${arr[1]} = ${action(arr)}`;
+
+        default:
+            alert("sorry, you did not enter any of the options");
+            whatAction();
+    }
+
 }
 
-showResult(numbers, whatAction);
+showResult(numbers, add);
+// showResult(numbers, sub);
+
+// console.log(showResult(numbers));
 
 
 
