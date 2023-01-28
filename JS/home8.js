@@ -1,0 +1,62 @@
+// Створити скрипт який повинен виконувати наступне:
+
+// питаємо у користувача, що він хоче зробити (add, sub, mult, div);
+// питаємо у користувача два числа через кому;
+// виводимо результат дії (add, sub, mult, div) з усіма операндами (Наприклад "2 + 3 = 5").
+
+// додатково але не обовязково:
+
+// запитувати юзера (add, sub, mult, div) і ввипадку якщо він вів щось інше вивести алертом
+
+// "sorry, you did not enter any of the options"
+// й запитати його знову, й так поки юзер не введе add або sub або mult або div.
+
+// const whatToDo = prompt("що ти хочеш зробити - add, sub, mult, чи div");
+
+const whatAction = prompt("що ти хочеш зробити - add, sub, mult, чи div");
+
+const numberToCount = prompt("введіть 2 числа");
+
+let numbers = numberToCount.split(" ").map((num) => Number(num));
+
+let result = 0;
+
+
+const add = (arr)=> arr[0] + arr[1];
+const sub = (arr)=> arr[0] - arr[1];
+const mult = (arr)=> arr[0] * arr[1];
+const div = (arr)=> arr[0] / arr[1];
+
+
+
+switch (whatAction) {
+  case "add":
+      console.log(`${numbers[0]} + ${numbers[1]} = ${add(numbers)}`);
+      alert(`${numbers[0]} + ${numbers[1]} = ${add(numbers)}`)
+    break;
+
+  case "sub":
+    sub(numbers);
+      console.log(`${numbers[0]} - ${numbers[1]} = ${sub(numbers)}`);
+      alert(`${numbers[0]} - ${numbers[1]} = ${sub(numbers)}`)
+
+    break;
+
+  case "mult":
+    mult(numbers);
+    console.log(`${numbers[0]} * ${numbers[1]} = ${mult(numbers)}`);
+    alert(`${numbers[0]} * ${numbers[1]} = ${mult(numbers)}`)
+
+  break;
+
+  case "div":
+    div(numbers);
+    console.log(`${numbers[0]} / ${numbers[1]} = ${div(numbers)}`);
+    alert(`${numbers[0]} / ${numbers[1]} = ${div(numbers)}`)
+
+    break;
+
+    default:
+        alert("sorry, you did not enter any of the options");
+}
+
