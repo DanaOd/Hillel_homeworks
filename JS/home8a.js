@@ -27,32 +27,37 @@ const mult = (arr)=> arr[0] * arr[1];
 const div = (arr)=> arr[0] / arr[1];
 
 
-const showResult = (arr, action)=>{
+const showResult = (arr)=>{
     
     switch (whatAction) {
       case "add":
-          return `${arr[0]} + ${arr[1]} = ${action(arr)}`;
+        add(arr);
+        alert(`${arr[0]} + ${arr[1]} = ${add(arr)}`);
+          return `${arr[0]} + ${arr[1]} = ${add(arr)}`;
     
       case "sub":
         sub(arr);
-        return `${arr[0]} - ${arr[1]} = ${action(arr)}`;
+        alert(`${arr[0]} - ${arr[1]} = ${sub(arr)}`);
+        return `${arr[0]} - ${arr[1]} = ${sub(arr)}`;
     
       case "mult":
         sub(arr);
-        return `${arr[0]} * ${arr[1]} = ${action(arr)}`;
+        alert(`${arr[0]} * ${arr[1]} = ${mult(arr)}`);
+        return `${arr[0]} * ${arr[1]} = ${mult(arr)}`;
     
       case "div":
         sub(arr);
-        return `${arr[0]} / ${arr[1]} = ${action(arr)}`;
+        alert(`${arr[0]} / ${arr[1]} = ${div(arr)}`);
+        return `${arr[0]} / ${arr[1]} = ${div(arr)}`;
 
         default:
             alert("sorry, you did not enter any of the options");
-            whatAction();
     }
 
 }
 
-showResult(numbers, add);
+showResult(numbers);
+// console.log(showResult(numbers));
 
 
 
