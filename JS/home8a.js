@@ -31,24 +31,16 @@ const showResult = (arr)=>{
     
     switch (whatAction) {
       case "add":
-        add(arr);
-        alert(`${arr[0]} + ${arr[1]} = ${add(arr)}`);
-          return `${arr[0]} + ${arr[1]} = ${add(arr)}`;
+          return alert(`${arr[0]} + ${arr[1]} = ${add(arr)}`);
     
       case "sub":
-        sub(arr);
-        alert(`${arr[0]} - ${arr[1]} = ${sub(arr)}`);
-        return `${arr[0]} - ${arr[1]} = ${sub(arr)}`;
+        return alert(`${arr[0]} - ${arr[1]} = ${sub(arr)}`);
     
       case "mult":
-        sub(arr);
-        alert(`${arr[0]} * ${arr[1]} = ${mult(arr)}`);
-        return `${arr[0]} * ${arr[1]} = ${mult(arr)}`;
+        return  alert(`${arr[0]} * ${arr[1]} = ${mult(arr)}`);
     
       case "div":
-        sub(arr);
-        alert(`${arr[0]} / ${arr[1]} = ${div(arr)}`);
-        return `${arr[0]} / ${arr[1]} = ${div(arr)}`;
+        return alert(`${arr[0]} / ${arr[1]} = ${div(arr)}`);
 
         default:
             alert("sorry, you did not enter any of the options");
